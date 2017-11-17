@@ -18,10 +18,10 @@ void merge(int v[], int l, int m, int r)
 	while(i<=m)
 		w[k++]=v[i++];
 	while(j<=r)
-		w[k++]=v[i++];
+		w[k++]=v[j++];
 
 
-	for(i=0; i<=k; i++)
+	for(i=0; i<k; i++)
 		v[l+i]=w[i];
 }
 
@@ -43,7 +43,7 @@ int main()
 
 	mergeSort(v, 0, 6);
 	for(int i=0; i<7; i++)
-		cout<<v[i];
+		cout<<v[i]<<' ';
 
 	return 0;
 }
